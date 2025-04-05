@@ -1,0 +1,112 @@
+:root {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --card-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+}
+
+.light {
+  --bg-color: #f2f2f2;
+  --text-color: #121212;
+  --card-bg: rgba(255, 255, 255, 0.5);
+  --glass-border: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', sans-serif;
+  transition: background 0.5s, color 0.5s;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  align-items: center;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #ff4081;
+  text-shadow: 0 0 5px #ff4081;
+}
+
+.section {
+  margin: 40px auto;
+  max-width: 900px;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  transition: background 0.5s;
+}
+
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.section p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.section-img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 15px;
+  border: 2px solid var(--glass-border);
+  transition: transform 0.3s ease;
+}
+
+.section-img:hover {
+  transform: scale(1.03);
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+button#toggleMode {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  background: #ff4081;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button#toggleMode:hover {
+  background: #e91e63;
+}
+
+.glass {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
